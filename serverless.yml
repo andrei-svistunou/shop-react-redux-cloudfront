@@ -5,7 +5,8 @@ frameworkVersion: "3"
 provider:
   name: aws
   runtime: nodejs14.x
-  region: eu-west-1
+  region: us-east-1
+  profile: svistic
   # setup profile for AWS CLI.
   # profile: node-aws
 
@@ -19,7 +20,7 @@ plugins:
 
 custom:
   client:
-    bucketName: my-store-app
+    bucketName: aws.shop.sls
     distributionFolder: dist
   s3BucketName: ${self:custom.client.bucketName}
 
